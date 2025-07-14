@@ -28,16 +28,16 @@ VALUES
 --wrote a query to order the items by price: 
 SELECT item_name, price 
 FROM superstore 
-ORDER BY price; 
+ORDER BY price desc; 
 
 --wrote a query that shows a statistic about item prices: 
-SELECT MAX(price), item_name 
+SELECT MIN(price) 
 FROM superstore; 
 
 --wrote a query that shows a statistic about item prices in the category of "Kitchen Supplies":
 SELECT SUM(price)
 FROM superstore
-WHERE category = 'Kitchen Supplies';
+WHERE category = "Kitchen Supplies";
 
 --wrote a query that shows which items have an average rating of 4.5 and higher:
 SELECT item_name,average_rating
@@ -45,8 +45,14 @@ FROM superstore
 WHERE average_rating>=4.5
 ORDER BY average_rating DESC;
 
--wrote a query that orders the quantity of items in the category of "Furnishings"
+-=wrote a query that orders the quantity of items in the category of "Furnishings"
 SELECT item_name, stock_quantity
 FROM superstore
-WHERE category = 'Furnishings'
-ORDER BY stock_quantity ASC;
+WHERE category = "Furnishings"
+ORDER BY stock_quantity DESC;
+
+--wrote a query that shows the highest price of items in the category of "Appliances" 
+SELECT MAX(price)
+FROM superstore
+WHERE category = "Appliances"; 
+
