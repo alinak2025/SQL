@@ -28,7 +28,7 @@ VALUES
 --wrote a query to order the items by price: 
 SELECT item_name, price 
 FROM superstore 
-ORDER BY price desc; 
+ORDER BY price DESC; 
 
 --wrote a query that shows a statistic about item prices: 
 SELECT MIN(price) 
