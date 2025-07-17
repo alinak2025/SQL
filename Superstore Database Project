@@ -34,7 +34,7 @@ ORDER BY price DESC;
 SELECT MIN(price) 
 FROM superstore; 
 
---wrote a query that shows a statistic about item prices in the category of "Kitchen Supplies":
+--wrote a query that displays a statistic about item prices in the category of "Kitchen Supplies":
 SELECT SUM(price)
 FROM superstore
 WHERE category = "Kitchen Supplies";
@@ -51,8 +51,13 @@ FROM superstore
 WHERE category = "Furnishings"
 ORDER BY stock_quantity DESC;
 
---wrote a query that shows the highest price of items in the category of "Appliances" 
+--wrote a query that displays the highest price of items in the category of "Appliances" 
 SELECT MAX(price)
 FROM superstore
 WHERE category = "Appliances"; 
+
+--wrote a query that shows the quantity of air purifiers in stock 
+SELECT stock_quantity 
+FROM superstore
+WHERE item_name = "Air Purifier"; 
 
